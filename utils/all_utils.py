@@ -8,12 +8,26 @@ import os
 plt.style.use("fivethirtyeight")
 
 def prepare_data(df):
+    """it is used to seperate labels and data
+
+    Args:
+        df (pd.DataFrame): its is pandas dataframe
+
+    Returns:            
+        tuple: it returns the tuples of dependent and indepedent variables
+    """
     X = df.drop("y", axis=1)
     y = df["y"]
     return X, y
 
 
 def save_model(model, filename):
+    """this function saves the trained model
+
+    Args:
+        model (python object): trainied model 
+        filename (string): path to save the trained model
+    """
     model_dir = "models"
     os.makedirs(model_dir, exist_ok=True)
     filePath = os.path.join(model_dir, filename)
