@@ -2,7 +2,7 @@
 OneNeuronPerceptron
 
 
-## show table in README.md file
+# show table in README.md file
 
 X1 | X2 | y
 -|-|- 
